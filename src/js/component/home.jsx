@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import TrafficLights from "./trafficLights";
-import Cloud from "./cloud";
 
 //create your first component
 const Home = () => {
@@ -17,9 +16,6 @@ const Home = () => {
         <p style={textStyle}>Can you discover the hidden switch that toggles the traffic lights between auto and manual mode? <br></br> Give it a try and see if you can find it!</p>
         <p style={modeTextStyle}>Current Mode: <span style={modeTextHighlightStyle}>{timeModeOn ? "Auto" : "Manual"}</span></p>
       </div>
-        {/* <div style={cloudContainerStyle}>
-          <Cloud />
-        </div>     */}
         <TrafficLights timeModeOn={timeModeOn} />
       <div onClick={handleCloudClick} className="traffic-light-pole" style={trafficLightPoleStyle}></div>
     </div>
@@ -66,14 +62,6 @@ const modeTextStyle = {
 const modeTextHighlightStyle = {
   fontWeight: 'bold',
   color: '#e74c3c', // Red color for the highlight
-};
-
-const cloudContainerStyle = {
-  display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'flex-start',
-  width: '100%',
-  marginTop: '20px',
 };
 
 const trafficLightPoleStyle = {
